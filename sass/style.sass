@@ -1,0 +1,326 @@
+@charset "UTF-8"
+
+@import "variables"
+@import "mixins"
+@import "core"
+@import "fonts"
+p 
+    margin: 0
+    padding: 0
+
+
+
+.header_baner
+    background: url("../img/hero_image.png") center top no-repeat
+    position: relative
+    overflow: hidden
+  
+           
+
+
+.header_wrap
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+    padding-top: 88px
+    position: relative
+   
+       
+   
+    .header_logo
+        margin-right: 20px
+        z-index: 2
+               
+        img            
+            width: 80px
+            height: 80px
+            
+    .header_menu
+        padding: 0
+        margin: 0
+        z-index: 1400
+        
+    .menu
+        display: flex
+        list-style: none
+        font-weight: wrap
+        
+
+        .menu_element
+            margin-right: 35px
+            z-index: 2
+            &:last-child
+                margin-right: 0
+            
+            .menu_link
+                font-size: 28px
+                color: $black
+                font-weight: 900
+                text-transform: uppercase
+                line-height: 1.667
+                text-decoration: none
+                transition-duration: 500ms
+                transition-property: color
+                z-index: 99
+                &::before
+                    content: ''
+                    width: 15px
+                    height: 4px
+                    background-color: $red
+                    display: block
+                    margin-bottom: 2px
+                    opacity: 0
+                    transition-duration: 500ms
+                    transition-property: opacity
+                &:hover
+                    color: $red
+                    &::before
+                        opacity: 1
+
+// ///////////BANER-INFO///////
+.baner_info
+    padding-top: 200px
+    padding-bottom: 178px
+    
+      
+    .baner_title
+        font-size: 72px
+        font-weight: 700
+        margin-bottom: 40px
+    .baner_text
+        font-size: 26px
+        .baner_bold
+            font-weight: 700
+
+// //////////ABOUT//////////////
+.about_list
+    display: grid
+    grid-template-columns: repeat(12, minmax(60px, 800px))
+    grid-auto-rows: minmax(500px, auto)
+    list-style: none
+.about_element--free
+    grid-column: span 3
+
+.about_element--six
+    grid-column: span 6
+.about_element
+
+    &:first-child
+        background: linear-gradient(to top, rgba(237,31,36,0.7), rgba(237,31,36,0.7)), url('../img/photo_1.png') center no-repeat
+        background-size: cover
+        
+         
+    &:nth-child(2)
+        background-color: #f3f1ef
+        max-width: 800px
+       
+         
+        
+    .about-titel        
+        font-size: 24px       
+        color: rgb(102, 102, 102)
+        text-transform: uppercase
+        line-height: 1.2
+        text-align: left
+        padding-left: 50px
+       
+    .about-text        
+        font-size: 28px        
+        color: rgb(102, 102, 102)
+        line-height: 1.2
+        text-align: left
+        padding-top: 20px
+        padding-left: 50px
+       
+        
+    &:nth-child(3)
+        background: url('../img/photo_2.png') center no-repeat
+        background-size: cover
+    &:nth-child(4)
+        background: url('../img/photo_3.png') center no-repeat
+        background-size: cover
+    &:nth-child(5)
+        background: url('../img/photo_4.png') center no-repeat
+        background-size: cover
+    &:nth-child(6)
+        background: url('../img/photo_5.png') center no-repeat
+        background-size: cover
+
+// INSTAGRAM 
+.instagram_list
+    display: grid
+    grid-template-columns: repeat(12, minmax(60px, 800px))
+    grid-auto-rows: minmax(500px, auto)
+    list-style: none
+.instagram_element--free
+    grid-column: span 3
+
+.instagram_element--six
+    grid-column: span 6
+.instagram_element
+    &:first-child
+        background-color: #3f729b        
+        display: flex
+        flex-direction: column
+
+    &:nth-child(2)
+        background: url('../img/photo_6.png') center no-repeat
+        background-size: cover
+        
+    &:nth-child(3)
+        background-color: #3f729b
+        
+
+    .instagram-titel   
+        font-size: 24px  
+        color: rgb(249, 249, 249)
+        text-transform: uppercase
+        line-height: 1.2
+        padding-left: 100px
+        margin-top: 50px
+        
+    
+    .instagram-text
+        font-size: 36px  
+        color: rgb(249, 249, 249)
+        line-height: 1.2
+        padding-left: 100px
+        margin-top: 30px
+      
+
+    .instagram-buton
+        font-size: 18px
+        color: rgb(249, 249, 249)
+        text-transform: uppercase
+        line-height: 1.2
+        text-align: center
+        width: 250px       
+        margin-top: 30px
+        margin-left: 100px
+    
+
+// DJ 
+.dj_list
+    display: grid
+    grid-template-columns: repeat(12, minmax(60px, auto))
+    grid-auto-rows: minmax(900px, auto)
+    list-style: none
+.dj_element--free
+    grid-column: span 3
+.dj_element--nine
+    grid-column: span 9
+.dj_element
+    position: relative
+    
+    &:first-child
+        background-color: #282b2f       
+    &:nth-child(2)
+        background: url('../img/photo_dj.png') center no-repeat
+        background-size: cover
+    .video-block
+        position: absolute
+        top: 0
+        left: 0
+        background-color: rgb(33, 34, 39)  
+        width: 337px
+        height: 500px
+        .video-block--wrap
+            margin-top: 140px
+            margin-left: 50px
+        .vide-title         
+            font-size: 24px 
+            color: $green
+            text-transform: uppercase
+            line-height: 1.333
+            text-align: left
+            .smal-text
+                font-size: 18px
+        .video-text           
+            font-size: 14px  
+            color: $white
+            line-height: 1.5
+            text-align: left
+            margin-top: 40px
+        .video-button 
+            width: 190px
+            height: 45px
+            margin-top: 50px
+                   
+            .video-button-text
+                font-size: 18px 
+                color: $green
+                text-transform: uppercase
+                line-height: 1.778
+                text-align: left
+                font-weight: 700
+                
+//SPORTIFY_ITUNES
+                
+.sportify_itunes_list
+    display: grid
+    grid-template-columns: repeat(12, minmax(60px, 800px))
+    grid-auto-rows: minmax(517px, auto)
+    list-style: none
+.sportify_itunes_element--six
+    grid-column: span 6
+.sportify_itunes_element
+           
+    &:first-child
+        background-color: $green   
+        max-width: 800px      
+       
+    &:nth-child(2)  
+        background-color: $gray 
+        max-width: 800px 
+       
+
+    .sportify_itunes-wrap     
+        margin-top: 50px
+        display: flex
+        flex-direction: column    
+        
+        .sportify_itunes-title
+            font-size: 24px  
+            color: $white
+            text-transform: uppercase
+            line-height: 1.2
+            text-align: left            
+            margin-right: 0px
+            margin-left: 100px
+            
+        .sportify_itunes-text          
+            font-size: 36px  
+            color: $white
+            line-height: 1.2
+            text-align: left
+            margin-top: 44px        
+            margin-right: 0px
+            margin-left: 100px
+            
+        .sportify_itunes-button
+            color: $white
+            text-transform: uppercase
+            font-weight: 700
+            margin-top: 47px
+            border: 2px solid $white
+            padding-right: 0px
+            margin-right: 0px
+            margin-left: 100px
+            
+// FOOTER
+// .footer_wrap
+//     display: grid
+//     grid-template-columns: repeat(12, minmax(60px, 600px))
+//     grid-auto-rows: minmax(517px, auto)
+//     list-style: none
+// .footer_element--free
+//     grid-column: span 3
+// .footer_element--six
+//     grid-column: span 6
+  
+         
+   
+
+          
+  
